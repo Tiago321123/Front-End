@@ -1,0 +1,116 @@
+/* MAIN */
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%)
+}
+
+.main{
+    display:flex;
+    align-items: center;
+    height: 900px;
+}
+
+/* 1 Part left*/
+.texto{
+    color: #fff;
+    width: 550px;
+    margin-right:100px;
+    margin-left:150px;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 700px;
+    margin-bottom:30px;
+}
+
+/* 2 Part right */
+
+.button1{
+    background-color: hsl(248, 32%, 49%);
+    border: 0;
+    border-radius: 7px;
+    padding: 15px;
+    width: 480px;
+    color: #fff;
+    font-weight: 600px;
+    box-shadow: 0 10px 10px -5px hsl(0, 2%, 35%);
+}
+
+/* FORMS */
+
+.forms-data{
+    background-color: #fff;
+    width: 480px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+#firstname{
+    margin-top:30px;
+}
+
+.form-control{
+    width: 390px;
+    padding: 15px;
+    margin: 0px 20px 20px 30px;
+    border:1px solid;
+    border-color: rgb(161, 161, 168);
+    border-radius: 5px;
+}
+
+.forms{
+    margin-right: 130px;
+    box-shadow: 0 10px 10px -5px hsl(0, 2%, 35%);
+}
+
+.button2{
+    padding: 15px;
+    width: 422px;
+    margin-left:30px;
+    background-color: hsl(154, 59%, 51%);
+    color: #fff;
+    border:0px solid;
+    border-radius: 5px;
+}
+
+.forms-data p{
+    font-size: 10px;
+    text-align: center;
+    color:rgb(161, 161, 168);
+}
+
+.forms-data span{
+    color:red;
+}
+
+/* códigos dos erros */
+
+.forms-data form p{ /* sem a class forms-data não funciona o css */
+    display: none;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color:red;
+    font-family: 'Red Hat Display', sans-serif, italic;
+}
+
+img{
+position: relative;
+float: right;
+margin-top: -32px;
+margin-right: 50px;
+width: 1.2em;
+display: none;
+
+}
+/*
+#email ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ 
+    color: red;
+    opacity: 1; /* Firefox 
+  }
+*/
