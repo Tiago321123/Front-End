@@ -1,0 +1,57 @@
+body{
+    margin:40px;
+    padding:0;
+    font-family: Arial;
+    /* font-family e apenas font é BEM DIFERENTE */
+}
+
+h1, p{
+    margin: 0;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    place-items: start end;
+}
+
+h1{
+    line-height: 1;
+    font-size: 48px;
+    grid-column: 2;
+    text-align: end;
+}
+
+p{
+    font-size: 20px;
+}
+
+img{
+    max-width: 100%; 
+    grid-column: 2/3;
+    border-radius: 4px;
+}
+
+a{
+    display:grid;
+    background-color: #a8f;
+    color: #103;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius:4px;
+    text-align:center;
+    text-decoration: none;
+    place-self: start stretch;
+     /* 1 / -1 é mais seguro, preenche todo o width da tela */
+}
+
+.preco{
+    font-size: 20px;
+    background-color:#ddd;
+    padding:5px 10px;
+    border-radius:4px;
+    /* align-self: start;  esse self que eu consigo brincar, posicionar onde eu quiser 
+    em uma caixa */
+    /* justify-self: center;  */
+}

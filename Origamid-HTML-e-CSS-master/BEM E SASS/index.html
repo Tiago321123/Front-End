@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .main-nav__item {
+        color: red;
+        font-size: 3rem;
+    }
+
+    .main-nav__item--disabled {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <header class="main">
+        <nav class="main-nav" aria-label="main">
+            <ul class="main-nav__list">
+                <li class="main-nav__item main-nav__item--disabled"><a class="main-nav__link" href="#">item</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">item</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">item</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="card">
+        <aside class="card__aside">
+            <figure class="card__figure">
+                <img src="https://satyr.io/400x200?text=card__image" alt="Dummy Image" class="card__image">
+            </figure>
+        </aside>
+        <header class="card__header">
+            <h2 class="card__title">Card Title</h2>
+            <h3 class="card__subtitle">
+                Card Subtitle
+            </h3>
+        </header>
+        <div class="card__body">
+            <p class="card__copy">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis
+                deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut
+                temporibus, at amet corporis id asperiores.
+            </p>
+        </div>
+        <footer class="card__footer">
+            <div class="card__actions">
+                <button class="button">
+                    Button
+                </button>
+            </div>
+        </footer>
+    </article>
+
+    <article class="card">
+        <div class="card__header">
+            <figure class="card__figure">
+                <img src="https://satyr.io/400x200?text=card__image" alt="" class="card__image">
+            </figure>
+        </div>
+        <div class="card__body">
+            <h2 class="card__title">Card Title</h2>
+            <h3 class="card__subtitle">
+                Card Subtitle
+            </h3>
+            <p class="card__copy">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis
+                deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut
+                temporibus, at amet corporis id asperiores.
+            </p>
+        </div>
+        <footer class="card__footer">
+            <div class="card__actions">
+                <button class="button">
+                    Button
+                </button>
+            </div>
+        </footer>
+    </article>
+
+
+    <ul class="list">
+        <li class="list__item">one</li>
+        <li class="list__item">two</li>
+        <li class="list__item">
+            three
+            <ul class="list list--second">
+                <li class="list__item list__item--second">Point 3.1</li>
+                <li class="list__item list__item--second">Point 3.2</li>
+                <li class="list__item list__item--second">Point 3.3</li>
+            </ul>
+        </li>
+        <li class="list__item">four</li>
+    </ul>
+
+    <div class="input-group">
+        <label for="myInput" class="input-group__label">Label:</label>
+        <input type="text" id="myInput" class="input-group__input">
+        <span class="input-group__help">
+            This is a help text. Could be a warning, too. For different colors you
+            should use modifier classes.
+        </span>
+    </div>
+
+    <!--<BULMA>-->
+    <section class="hero has-background-grey-dark">
+        <div class="hero-body">
+            <div class="container">
+                <figure class="image center">
+                    <img src="https://th.bing.com/th/id/R.6bf9b4da7da578b9d3447adc363d32e1?rik=o8Ap5a1LwW0lRg&riu=http%3a%2f%2fbulma.io%2fimages%2fbulma-logo.png&ehk=EuStSEuE0Ka5OzxrZ1JSQFciz2hkXViaPe3VjjAtj2w%3d&risl=&pid=ImgRaw&r=0"
+                        style="max-width:512px">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="section has-background-light">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="notification is-info">
+                        <h1 class="title is-size-4">Bulma</h1>
+                        <p class="is-size-5">thghdghdfgh dfgh fdhgdfgjdgjf gjdgjdfgjdjfgjsg sdjs gjsfgjsfgjsfgj
+                            fgjsfgjsfgj sfgjsfgjs
+                            fgjsrtsetserhs </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="notification is-primary">
+                        <h1 class="title is-size-4">...Flexbox?</h1>
+                        <p class="is-size-5">thghdghdfgh dfgh fdhgdfgjdgjf gjdgjdfgjdjfgjsg sdjs gjsfgjsfgjsfgj
+                            fgjsfgjsfgj sfgjsfgjs
+                            fgjsrtsetserhs</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="notification is-warning">
+                        <h1 class="title is-size-4">...Classes?</h1>
+                        <p class="is-size-5">thghdghdfgh dfgh fdhgdfgjdgjf gjdgjdfgjdjfgjsg sdjs gjsfgjsfgjsfgj
+                            fgjsfgjsfgj sfgjsfgjs
+                            fgjsrtsetserhs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="btn btn--primary">Comprar</button>
+    <button class="btn btn--success">Comprar</button>
+    <button class="btn btn-warning">Comprar</button>
+    <button class="btn btn--big">Comprar</button>
+    <!--</Bulma>-->
+
+    <div class="form-group">
+        <label class="form-group__label form-group__label--error">Nome</label>
+        <input type="text" class="form-goup__input form-group__input--error" placeholder="Digite seu nome aqui">
+    </div>
+
+    <div class="form-group">
+        <label class="form-group__label form-group__label--success">Nome</label>
+        <input type="text" class="form-goup__input form-group__input--success" placeholder="Digite seu nome aqui">
+    </div>
+</body>
+
+</html>

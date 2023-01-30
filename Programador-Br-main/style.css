@@ -1,0 +1,104 @@
+body{
+    font: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 1000px;
+}
+
+.title{
+    background-color: #48C5CE;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 26px;
+}
+
+.main{
+    padding: 20px;
+    background-image: url(./imagens/people.jpg);
+    background-size: cover; /* é esse que deixa a imagem perfeita no tamanho disponível na tela */
+    overflow: hidden;
+}
+    
+.formulario{
+    float: right;
+    background-color: #FFFFFFBB; /* cor da hora, deixa um pouco transparente para o background aparecer */
+    max-width: 230px;
+    padding: 20px; 
+    margin: 20px;
+}
+
+h2{
+    font-size: 16px;
+}
+
+p{
+    margin-top: 0px;
+}
+
+.md{
+    margin-bottom:15px;
+}
+
+input, select{
+    padding:10px;
+    margin-bottom: 10px;
+    width:100%;
+    box-sizing: border-box; /* não deixar as diferencas de temanho das caixas tudo */
+    border: none; /* sem as bordas */
+}
+
+input[type="submit"]{
+    color: #fff;
+    background-color: #48C5CE;
+    font-weight: bold;
+}
+
+select{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url(./imagens/arrow.jpg);
+    background-repeat: no-repeat;
+  /*background-position: calc(100% - 10px) center; */
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+}
+
+.texto_e_foto{
+    color:white;
+    background: #202121;
+    text-align: center; /* não só texto como imagem também centraliza */
+    padding: 40px;
+}
+
+.imgface{
+    width: 160px;
+}
+
+.divfooter{
+    margin-left: 40px;
+    max-width: 40%;
+    display: inline-block;
+    text-align: left;
+}
+
+.divfooter p, .divfooter h3{
+    margin-bottom: 20px;
+}
+
+.divfooter h3{
+    font-size: 24px;
+}
+
+@media (max-width: 748px){
+    .formulario{
+       max-width: 100%;
+    }
+    .divfooter{
+       display: block;
+       max-width: 80%;
+    }
+}

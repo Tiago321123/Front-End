@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- na dúvida, vai no W3Schools -->
+
+<body>
+    <a target="_blanck"
+        href="https://th.bing.com/th/id/OIP.cLFYh5JgUcvbxNL4oz9WjAHaGF?w=256&h=210&c=7&r=0&o=5&pid=1.7">imagem em outra
+        tela</a>
+
+    <img src="https://th.bing.com/th/id/OIP.cLFYh5JgUcvbxNL4oz9WjAHaGF?w=256&h=210&c=7&r=0&o=5&pid=1.7">
+
+    <h3>Pesquisando no google</h3>
+    <form action="https://www.google.com.br/search">
+        <!--NÃO EXISTE TAG FORMS -->
+        <label for="q">O que vc deseja pesquisar?</label>
+        <input type="text" id="q" name="q" placeholder="Pesquisa">
+        <input type="submit" value="Pesquisar">
+    </form>
+
+    <form>
+        <input type="text" placeholder="Pesquisa" required maxlength="10">
+        <!--digita até 10 caracter e para-->
+        <input type="submit" value="Pesquisar">
+    </form>
+    <!-- É um form para cada submit -->
+    <br>
+    <form>
+        <input type="email" placeholder="Pesquisa" required>
+        <input type="submit" value="Pesquisar">
+    </form>
+    <br>
+    <form>
+        <input type="number" for="number" placeholder="Pesquisa" min="10" max="20">
+        <input type="submit" id="number" value="Pesquisar">
+        <br>
+    </form>
+    <form>
+        <input type="text" name="fname" placeholder="Pesquisa" required>
+        <!--fname, lname, email, para autocompletar-->
+        <input type="submit" value="Pesquisar">
+    </form>
+    <br>
+    <form>
+        <input type="email" name="email" placeholder="Pesquisa" required>
+        <input type="submit" value="Pesquisar">
+    </form>
+
+    <br>
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd">
+    </form>
+    <br>
+    <form>
+        <input type="radio" name="gender" value="male"> Male <br>
+        <input type="radio" name="gender" value="female"> Female <br>
+        <input type="radio" name="gender" value="other"> Other <br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form>
+        <input type="color" name="favecolor">
+        <input type="submit">
+    </form>
+    <br>
+
+    <form>
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile">
+    </form>
+
+    <form>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+    </form>
+</body>
+
+</html>

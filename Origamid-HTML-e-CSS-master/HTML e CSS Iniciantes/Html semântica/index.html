@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav arial-label="primária">
+            <ul>
+                <!--usar ul pode gerar barulho, são apenas dois links, mas é bom q use-->
+                <a href="#">Sobre</a>
+                <a href="#">Contatos</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Título</h1>
+        <p>texto qualquerr etethetehe</p>
+    </main>
+    <section></section> <!-- não criar ponto de referência para o leitor de tela, precisaria do arial-label-->
+    <!--Section sozinho não se entende, não é independente do site-->
+
+    <!-- https://www.smashingmagazine.com/2020/01/html5-article-section/ -->
+
+    <!-- <article area-label="sobre a bickcraft"> vai ler duas vezes o mesmo conteúdo -->
+    <article area-labelldy="sobrebik">
+        <!--aparece como article nos pontos de referência-->
+        <!--vai ter a area, mas não vai ler o conteúdo-->
+        <h1 id="sobrebik">Sobre a Bikcraft</h1>
+        <p>Empresa fundada em 2012 por mim mesmo kkk</p>
+    </article> <!-- cria ponto de referência para o leitor de tela-->
+    <!--Article sozinho se entende, é independente do site-->
+
+    <section area-label="sobrebik">
+        <!--precisa do area label para criar o ponto de referência. Aparece como região nos pontos de referência-->
+        <h1>Sobre a Bikcraft</h1>
+        <p>Empresa fundada em 2012 por mim mesmo kkk</p>
+    </section>
+
+    <article area-labelldy="sobrebik">
+        <header>
+            <!--header do article-->
+
+            <!--Dessa forma, tanto header como footer, eles não criam mais ponto de referência, é apenas 
+            para marcar semânticamente esse article-->
+
+            <h1 id="sobrebik">Sobre a Bikcraft</h1>
+            <p>Autor: Tiago</p>
+        </header>
+
+        <footer>
+            <!-- footer do article -->
+            <p>Todos os direitos reservados</p>
+        </footer>
+
+    </article>
+
+    <footer>
+        <!-- footer do site -->
+
+    </footer>
+
+    <blockquote cite="https://google.com">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur</p>
+    </blockquote>
+    <p>T. R. Pedro</p>
+
+    <p>Lorem ipsum dolor sit amet, <q>consectetur adipiscing elit,</q> sed do eiusmod tempor incididunt ut labore et
+        dolore
+        Duis </p> <!-- q de citacão-->
+    <p>O livro <cite>O desejado de todas as nações</cite> fala sobre kgkghvhgv</p>
+    <!-- cite apenas para obras, livros-->
+    <p>Lorem ipsum dolor sit amet, <em>consectetur<em>adipiscing elit</p>
+    <!--em para enfatizar algo-->
+    <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit</p>
+    <!--dá importância-->
+
+</body>
+
+</html>

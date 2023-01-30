@@ -1,0 +1,74 @@
+@keyframes changecolor {
+    /*
+    from { background-color: blue;}
+    to { background-color: red;}
+    */
+    0%{ background-color: blue;}
+    25%{ background-color: red; width: 400px}
+    50%{ background-color: yellow;}
+    100%{ background-color: green; width: 100px;}
+}
+
+@keyframes movee {
+    0%{left: 0px;}
+    100%{left: 300px;}
+}
+
+.box{
+    position: relative; /* sem ele, não vai o left ali*/
+    width: 200px;
+    height: 200px;
+    border: solid;
+    animation-name: movee;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-fill-mode:forwards; /* permanece com a última animação 
+    /* animation-direction: alternate-reverse;
+    animation-delay: 2s;
+    animation-fill-mode: backwards; /* já começa meio q na animação, como se não tivesse o delay 
+    animation-fill-mode: both; para poder usar os dois juntos, backwards e forwards */
+
+    /* animation: name duration time-function delay interation-count direction fill-mode */
+    animation: movee 3s linear 0s 3 normal forwards; /* resumir em apenas uma linha */
+}
+
+.div1{
+    animation-timing-function: linear;
+}
+
+.div2{
+    animation-timing-function: ease;
+}
+
+.div3{
+    animation-timing-function: ease-in;
+}
+
+.div4{
+    animation-timing-function:ease-out;
+}
+
+.div5{
+    animation-timing-function: ease-in-out;
+}
+
+.btn{
+    display: inline-block;
+    padding: 20px;
+    background-color: #428BCA;
+    color: #fff;
+    font-size: 30px;
+
+    transition-property: background-color, padding; /* ou só coloca all */
+    transition-duration: 500ms, 1s; /* 500ms para background e 1s para padding */
+    transition-delay: 100ms;
+    transition-timing-function: ease-in;
+
+    transition: background-color 500ms ease-out, padding 800ms; /* é nessa ordem de cima */
+}
+
+.btn:hover{
+    background-color: #2228CA;
+    padding-right: 30px;
+    padding-left: 30px;
+}

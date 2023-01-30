@@ -1,0 +1,255 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-color: rgb(226, 233, 255);
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0 -100px; /* cortei um pouco da parte de cima, deixar menor */
+}
+
+#all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.figura {
+  border-radius: 15px 15px 0px 0px;
+  position: relative;
+  margin-top: 70px;
+}
+
+.main {
+  background-color: #fff;
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+
+.texto h1 {
+  color: black;
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.texto p {
+  color: #8a8a8a;
+  width: 85%;
+  margin: 0 auto;
+  line-height: 1.4rem;
+}
+
+.plan {
+  background-color: #f6f8ff;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin: 15px 35px 0 35px;
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 10px;
+}
+
+#pricePlan {
+  margin-left: 15px;
+}
+
+#pricePlan h2 {
+  font-size: 14px;
+  margin-left: 0px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.plan a {
+  margin-left: 50px;
+  font-size: 14px;
+  color: #1e1fcd;
+  font-weight: 700;
+}
+
+.plan a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+.plan p {
+  margin-top: 5px;
+  color: #8a8a8a;
+  font-size: 15px;
+  margin-left: 0;
+  font-weight: 500;
+}
+
+.button {
+  width: 280px;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  background-color: #1e1fcd;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0px 5px 14px 0.5px #999999;
+  border: 0px;
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.final-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel {
+  font-size: 12px;
+  text-decoration: none;
+  color: #838383;
+  font-weight: 900;
+}
+
+.cancel:hover {
+  color: black;
+}
+
+/* pag of payment */
+ul {
+  list-style: none;
+  padding-inline-start: 15px;
+}
+
+.Plans image {
+  margin-top: 30px;
+}
+
+#page2 {
+  margin-top: 70px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Outrosplanos {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.Plans {
+  width: 800px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 260px;
+}
+
+.one,
+.style {
+  background-color: rgb(7, 155, 14);
+  padding: 5px;
+  height: 400px;
+  border-radius: 15px;
+}
+
+.Plans h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.Plans p {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.p-card {
+  margin-top: 20px;
+  opacity: 0.6;
+  font-size: 40px;
+  color: #9c9c9c;
+  font-weight: 700;
+}
+
+.one:hover,
+.style:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.style:hover {
+  opacity: 0.8;
+}
+
+.style {
+  position: absolute;
+  z-index: 2;
+  width: 250px;
+  height: 450px;
+  background: linear-gradient(400deg, #ff638b 42%, #fd9967 75%);
+}
+
+.style ul {
+  padding-left: 0px;
+}
+
+#first {
+  border-radius: 15px 0 0 15px;
+  z-index: 1;
+  background: linear-gradient(410deg, #745df7 52%, #b350f9 91%);
+}
+
+#second {
+  border-radius: 0 15px 15px 0;
+  background: linear-gradient(to bottom left, #02c873 20%, #02b6d1 80%);
+}
+
+.svg1 {
+  margin: 0;
+  padding: 0;
+  margin-top: 70px;
+}
+
+.buttons3 {
+  margin-top: 118px;
+}
+
+.buttons2 {
+  margin-top: 190px;
+}
+
+.buttons1 {
+  margin-top: 162px;
+}
+
+.buttons1,
+.buttons2,
+.buttons3 {
+  padding: 7px;
+  border-radius: 15px;
+  border: 0;
+  letter-spacing: 4px;
+  font-size: 12px;
+}

@@ -1,0 +1,45 @@
+h1{
+    position: relative;
+}
+
+h1::before{
+    content:''; /* used for decorations */
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    background-color: #caf;
+    position: absolute;
+    top:20px;
+    z-index: -1;
+}
+
+li{
+    font-size: 1.5rem;
+    display: flex; /* alinhar o before ou after */
+    align-items: center;
+}
+
+ul{
+    list-style:none;
+}
+
+li::before{
+    content:'';
+    width: 8px;
+    height: 8px;
+    background-image: linear-gradient(#caf, #fff);
+    display: inline-block;
+    border: 2px solid #caf;
+    margin-right: 10px;
+    border-radius: 50%; /* não importa o tamanho do element, vai ser um círculo */
+}
+
+p::first-line{
+    font-size: 2rem;
+}
+
+p::first-letter{
+    font-size: 3rem;
+    color:blue;
+}
+

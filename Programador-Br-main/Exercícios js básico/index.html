@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Exercícios</title>
+</head>
+
+<body>
+    <h1 onclick="console.log('h1 foi clicado');">Exercícios básicos JS</h1>
+    <div class="card">
+        <p onclick="clickme()" id="p">1. Escreva um programa que pede o raio de um círculo, e em seguida exiba o
+            perímetro e área do círculo.</p>
+        <form class="form">
+            <label class="form__label" for="raio">Escreva o raio do círculo</label><br>
+            <input class="form-group__input" placeholder="Raio" type="number" required="number" id="raio"></input>
+            <input class="form__input" type="button" value="Calcular" onclick="Question1()"></input>
+            <!-- CONSEGUUUUIIIIII RRRAAAAAA É TYPE="BUTTON" NÃO SUBMIT, SUBMIT DELETA OS CAMPOS EM SEGUIDA AAAAAA -->
+        </form>
+        <form class="form-resposta">
+            <label class="form__label" for="perimetro">Perímetro:</label><br>
+            <input class="form-resposta__input" type="text" id="perimetro" readonly="readonly"></input><br>
+
+            <label class="form__label" for="area">Área:</label><br>
+            <input class="form-resposta__input" type="text" id="area" readonly="readonly"></input>
+        </form>
+    </div>
+
+    <div class="card">
+        <p onclick="clickme()" id="p">2. Você fornece a temperatura em graus Celsius, e seu script JS faz a conversão
+            para graus Fahrenheit.</p>
+        <form class="form">
+            <label class="form__label" for="raio">Escreva a temperatura em Celsius:</label><br>
+            <input class="form-group__input" placeholder="°Celsius" type="number" required="number"
+                id="celsius"></input>
+            <input class="form__input" type="button" value="Calcular" onclick="Question2Celsius()"></input>
+        </form>
+        <form class="form-resposta">
+            <label class="form__label" for="perimetro">Fahrenheit:</label><br>
+            <input class="form-resposta__input" type="text" id="fahrenheit" readonly="readonly"></input><br>
+        </form>
+
+        <form class="form">
+            <label class="form__label" for="raio">Escreva a temperatura em Fahrenheit:</label><br>
+            <input class="form-group__input" placeholder="°Fahrenheit" type="number" required="number"
+                id="fahrenheit2"></input>
+            <input class="form__input" type="button" value="Calcular" onclick="Question2Fahrenheit()"></input>
+        </form>
+        <form class="form-resposta">
+            <label class="form__label" for="perimetro">Celsius:</label><br>
+            <input class="form-resposta__input" type="text" id="celsius2" readonly="readonly"></input><br>
+        </form>
+    </div>
+    <div class="card">
+        <p>04. Um novo modelo de carro, super econômico foi lançado.
+            Ele faz 20 km com 1 litro de combustível.
+            Cada litro de combustível custa R$ 5,00.<br>
+            Faça um programa que pergunte ao usuário quanto de dinheiro ele tem e em seguida diga quantos litros de
+            combustível ele pode comprar e quantos kilometros o carro consegue andar com este tanto de combustível.</p>
+        <form clas="form">
+            <label class="form__label" for="km">Digite quantos Km seu veículo faz por litro: </label><br>
+            <input class="form-group__input" placeholder="Ex: 20Km" type="number" required="number" id="km"></input><br>
+            <label class="form__label" for="raio">Digite o valor da gasolina:</label><br>
+            <input class="form-group__input" placeholder="Ex: R$5,00" type="number" required="number"
+                id="gasolina"></input><br>
+            <label class="form__label" for="raio">Agora digite quanto de dinheiro você tem para pagar a
+                gasolina:</label><br>
+            <input class="form-group__input" placeholder="R$300,00" type="number" required="number"
+                id="dinheiro"></input>
+            <input class="form__input" type="button" value="Calcular" onclick="Question3()"></input>
+
+        </form>
+
+        <form class="form-resposta">
+            <label class="form__label" for="litros">Litros que poderá comprar:</label><br>
+            <input class="form-resposta__input" type="text" id="litros" readonly="readonly"></input><br>
+            <label class="form__label" for="kms">Kms que poderão ser andados:</label><br>
+            <input class="form-resposta__input" type="text" id="kms" readonly="readonly"></input>
+        </form>
+
+    </div>
+    <h2>Lista de exercícios</h2>
+    <div class="card">
+        <p>1 – Calcule a média de diversas notas digitadas pelo usuário.</p>
+
+        <form class="form">
+            <label class="form__label" for="notas">Digite as notas aqui:</label><br>
+            <input class="form-resposta__input" type="text" id="notas"></input>
+            <input class="form__input" type="button" value="Calcular" onclick="Question4()"></input><br>
+        </form>
+        <form class="form-resposta">
+            <label class="form__label" for="notas">Média:</label><br>
+            <input class="form-resposta__input" type="text" id="media" readonly="readonly"></input>
+        </form>
+    </div>
+    <div class="card">
+        <p>2 - Faça um programa que entre com cinco números e imprima o quadrado de cada número..</p>
+
+        <form class="form">
+            <label class="form__label" for="notas">Digite os 5 número: </label><br>
+            <input class="form-resposta__input" type="text" id="numbers"></input>
+            <input class="form__input" type="button" value="Calcular" onclick="Question5()"></input><br>
+        </form>
+        <form class="form-resposta">
+            <label class="form__label" for="notas">Os números ao quadrado:</label><br>
+            <input class="form-resposta__input" type="text" id="quadrado" readonly="readonly"></input>
+        </form>
+    </div>
+    <div class="card">
+        <p>3 – Peça ao usuário para digitar 5 números em uma caixa de texto. Verifique qual é o maior número e exiba-o.
+        </p>
+
+        <form class="form">
+            <label class="form__label" for="notas">Digite os 5 número: </label><br>
+            <input class="form-resposta__input" type="text" id="numbers2"></input>
+            <input class="form__input" type="button" value="Calcular" onclick="Question6()"></input><br>
+        </form>
+        <form class="form-resposta">
+            <label class="form__label" for="notas">O maior deles:</label><br>
+            <input class="form-resposta__input" type="text" id="maior" readonly="readonly"></input>
+        </form>
+
+    </div>
+    <div class="card">
+</body>
+
+</html>

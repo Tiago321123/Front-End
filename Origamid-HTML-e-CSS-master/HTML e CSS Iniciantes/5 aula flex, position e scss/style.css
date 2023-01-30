@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+}
+
+.flex{
+    margin:0;
+    display:flex;
+    gap: 20px;
+    /* height: 100vh; vh = altura da tela */
+    flex-wrap: wrap;
+/*     
+    gap:20px;
+    background-color: chocolate;
+    place-content: center; */
+}
+
+h2{
+    /* width: 150px; */
+    padding: 20px;
+    font-family: Arial;
+    background-color: #cccc;
+}
+
+/*  flex da pesada */
+
+h2{
+    flex-grow: 1; /* distribui os espaços em branco igualmente entre os elementos,
+    ficando eles com tamanhos diferentes */
+    flex-basis:0; /* os elementos podem ter muito conteúdo ou não, faz q todos tenham o mesmo tamanho */
+    flex-shrink: 1; 
+    /* flex-shrink: 0;  se ñ tiver flex-basis:0 , ele não vai se quebrar ao reduzir a tela, simplesmente some*/
+    flex:1; /* resume tudo */     
+}
+
+.grid{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto)); /* MUUITO MASSA, auto-fit ñ funciona se for 'fr' 1fr*/
+    /* auto-fit: tente encaixar quantos itens forem possíveis */
+    gap:20px;
+    
+}
+
+.caixa{
+    margin: 10px;
+    padding: 20px;
+    height: 300px;
+    border:#cccc 2px solid;
+}
+
+/* Position fixed e relative */
+
+.btn{
+    position: relative; /* fica relativo em relacao ao elemento em q está, consegue se sobrepor
+    aos outros elementos */
+    top:-30px;
+}
+
+.fixed{
+    position: fixed; /* apenas ele, fica uma droga, tem q colocar o top ou bottom */
+    top:10px;
+    right: 30px;
+    padding: 20px;
+    background-color: red;
+    font-size: 16px;
+}
+
+/* Position absolute  */
+.caixa{
+    position: relative;
+}
+
+.btn{
+    position: absolute; /* só absolute, fica q nem o fixed, 
+    tem q ter o top ou bottom e colocar relative no elemento pai dele*/
+    top:-10px; 
+}
+
+/* position 2 aula */
+
+.position h1{
+    margin: 0;
+    padding: 0;
+}
+.teste1{
+    background-color: greenyellow;
+    position: relative;
+    top:10px;
+    z-index: 1; /* z-index e relative dá pra várias coisas */
+    /* sem o position, z-index ñ vai */
+}
+
+.teste2{
+    position: relative;
+    background-color: red;
+    top:-10px;
+    z-index: 0;
+}

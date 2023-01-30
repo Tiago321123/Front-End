@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .form input[type="number"] {
+            width: 200px;
+        }
+
+        .lastResult {
+            color: black;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Number guessing game</h1>
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you
+        if your guess was too high or too low.</p>
+
+    <div class="form">
+        <label for="guessField">Enter a guess: </label>
+        <input type="number" min="1" max="100" required id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit" onclick="clickSubmit()">
+    </div>
+
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+        var numberRandom;
+        var lowOrHi = document.querySelector(".lowOrHi");
+        var cont = 0;
+        var lastResult = document.querySelector(".lastResult");
+
+        function clickSubmit() {
+            cont++;
+            if (cont == 1) {
+                numberRandom = Math.random() * (100 - 1) + 1;
+                console.log(numberRandom.toFixed(0));
+            }
+            var numberField = document.getElementById("guessField");
+            numberField.innerText = "";
+
+            if (cont == 10 & numberField.value != numberRandom.toFixed(0)) {
+                lastResult.innerHTML = "Fim de jogo";
+                lowOrHi.innerHTML = "";
+                criarButtonRestart();
+            }
+            else
+                if (cont <= 10 & numberField.value != numberRandom.toFixed(0)) {
+                    lastResult.innerHTML = "Errado!";
+                    valoresAnterior();
+                }
+                else if (cont <= 10 & numberField.value == numberRandom.toFixed(0)) winGain();
+        }
+
+        var contButton = 0;
+        function winGain() {
+            const guessSubmit = document.querySelector('.guestSubmit');
+            lastResult.innerHTML = "Congratulations!!";
+            contButton++;
+            criarButtonRestart();
+        }
+        function criarButtonRestart() {
+            if (contButton == 1) {
+                const buttonRestart = document.createElement('button');
+                buttonRestart.className = 'restart';
+                buttonRestart.type = 'submit';
+                buttonRestart.innerText = "Restart game";
+                buttonRestart.addEventListener('click', buttonRestar);
+
+                const resultParas = document.querySelector(".resultParas");
+                resultParas.appendChild(buttonRestart);
+            }
+        }
+
+        function buttonRestar() {
+            const guesses = document.querySelector(".guesses");
+            guesses.innerHTML = "";
+            lowOrHi.innerHTML = "";
+            lastResult.innerHTML = "";
+            numberRandom = 0;
+            cont = 0;
+            contButton = 0;
+            const guessField = document.querySelector(".guessField");
+            guessField.value = "";
+            guessField.focus();
+
+            const buttonRestart = document.querySelector(".restart");
+            buttonRestart.parentNode.removeChild(buttonRestart);
+        }
+
+        function valoresAnterior() {
+            const number = document.getElementById("guessField");
+            const guesses = document.querySelector(".guesses");
+            if (guesses.innerHTML == "") {
+                guesses.innerHTML = "Números anteriores: " + number.value;
+            }
+            else guesses.innerHTML += " " + number.value;
+            if (number.value < numberRandom.toFixed(0)) {
+                lowOrHi.innerHTML = "Low";
+            }
+            else lowOrHi.innerHTML = "High";
+        }
+        /*would make the code more readable and understandable.
+
+Use comments: Comments are a great way to add additional information and context to your code. This can help other developers who may be reading your code to understand what it does and how it works. In this code, there are no comments, so it is difficult to know what some of the functions and variables are used for without reading through the code carefully. Adding comments where appropriate would make the code easier to understand.
+
+Use consistent indentation: The indentation in this code is not consistent, which can make it difficult to read. Using consistent indentation can help to improve the readability of your code.
+
+Use consistent naming conventions: In this code, some variables and functions use camelCase (e.g. numberRandom, winGain 
+Use descriptive variable names: The variable names in the code are not very descriptive and can be improved. For example, instead of using numberRandom to represent the random number that the player has to guess, a more descriptive name like randomNumber could be used. Similarly, lowOrHi could be named lowOrHigh, cont could be named count, and so on. Using descriptive variable names makes the code easier to read and understand.
+
+Use the === operator instead of the == operator: In JavaScript, the == operator performs type coercion, which means that it converts the operands to the same type before comparing them. This can sometimes lead to unexpected results. For example, in the code "1" == 1 is true, because the string "1" is coerced to the number 1 before the comparison. 
+In contrast, the === operator does not perform type coercion and only returns true if the operands are of the same type and value. It is generally considered best practice to use the === operator in JavaScript unless there is a specific reason to use the == operator.
+
+Use the else if statement instead of nested if statements: The code uses nested if statements to check different conditions. This can make the code difficult to read and understand. A better approach would be to use the else if statement, which allows you to specify multiple conditions and execute different code blocks depending on which condition is met. For example, instead of the following code:*/
+    </script>
+</body>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .form input[type="number"] {
+            width: 200px;
+        }
+
+        .lastResult {
+            color: black;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Number guessing game</h1>
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you
+        if your guess was too high or too low.</p>
+
+    <div class="form">
+        <label for="guessField">Enter a guess: </label>
+        <input type="number" min="1" max="100" required id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit" onclick="clickSubmit()">
+    </div>
+
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+        var numberRandom;
+        var lowOrHi = document.querySelector(".lowOrHi");
+        var cont = 0;
+        var lastResult = document.querySelector(".lastResult");
+
+        function clickSubmit() {
+            cont++;
+            if (cont == 1) {
+                numberRandom = Math.random() * (100 - 1) + 1;
+                console.log(numberRandom.toFixed(0));
+            }
+            var numberField = document.getElementById("guessField");
+            numberField.innerText = "";
+
+            if (cont == 10 & numberField.value != numberRandom.toFixed(0)) {
+                lastResult.innerHTML = "Fim de jogo";
+                lowOrHi.innerHTML = "";
+                criarButtonRestart();
+            }
+            else
+                if (cont <= 10 & numberField.value != numberRandom.toFixed(0)) {
+                    lastResult.innerHTML = "Errado!";
+                    valoresAnterior();
+                }
+                else if (cont <= 10 & numberField.value == numberRandom.toFixed(0)) winGain();
+        }
+
+        var contButton = 0;
+        function winGain() {
+            const guessSubmit = document.querySelector('.guestSubmit');
+            lastResult.innerHTML = "Congratulations!!";
+            contButton++;
+            criarButtonRestart();
+        }
+        function criarButtonRestart() {
+            if (contButton == 1) {
+                const buttonRestart = document.createElement('button');
+                buttonRestart.className = 'restart';
+                buttonRestart.type = 'submit';
+                buttonRestart.innerText = "Restart game";
+                buttonRestart.addEventListener('click', buttonRestar);
+
+                const resultParas = document.querySelector(".resultParas");
+                resultParas.appendChild(buttonRestart);
+            }
+        }
+
+        function buttonRestar() {
+            const guesses = document.querySelector(".guesses");
+            guesses.innerHTML = "";
+            lowOrHi.innerHTML = "";
+            lastResult.innerHTML = "";
+            numberRandom = 0;
+            cont = 0;
+            contButton = 0;
+            const guessField = document.querySelector(".guessField");
+            guessField.value = "";
+            guessField.focus();
+
+            const buttonRestart = document.querySelector(".restart");
+            buttonRestart.parentNode.removeChild(buttonRestart);
+        }
+
+        function valoresAnterior() {
+            const number = document.getElementById("guessField");
+            const guesses = document.querySelector(".guesses");
+            if (guesses.innerHTML == "") {
+                guesses.innerHTML = "Números anteriores: " + number.value;
+            }
+            else guesses.innerHTML += " " + number.value;
+            if (number.value < numberRandom.toFixed(0)) {
+                lowOrHi.innerHTML = "Low";
+            }
+            else lowOrHi.innerHTML = "High";
+        }
+        /*would make the code more readable and understandable.
+
+Use comments: Comments are a great way to add additional information and context to your code. This can help other developers who may be reading your code to understand what it does and how it works. In this code, there are no comments, so it is difficult to know what some of the functions and variables are used for without reading through the code carefully. Adding comments where appropriate would make the code easier to understand.
+
+Use consistent indentation: The indentation in this code is not consistent, which can make it difficult to read. Using consistent indentation can help to improve the readability of your code.
+
+Use consistent naming conventions: In this code, some variables and functions use camelCase (e.g. numberRandom, winGain 
+Use descriptive variable names: The variable names in the code are not very descriptive and can be improved. For example, instead of using numberRandom to represent the random number that the player has to guess, a more descriptive name like randomNumber could be used. Similarly, lowOrHi could be named lowOrHigh, cont could be named count, and so on. Using descriptive variable names makes the code easier to read and understand.
+
+Use the === operator instead of the == operator: In JavaScript, the == operator performs type coercion, which means that it converts the operands to the same type before comparing them. This can sometimes lead to unexpected results. For example, in the code "1" == 1 is true, because the string "1" is coerced to the number 1 before the comparison. 
+In contrast, the === operator does not perform type coercion and only returns true if the operands are of the same type and value. It is generally considered best practice to use the === operator in JavaScript unless there is a specific reason to use the == operator.
+
+Use the else if statement instead of nested if statements: The code uses nested if statements to check different conditions. This can make the code difficult to read and understand. A better approach would be to use the else if statement, which allows you to specify multiple conditions and execute different code blocks depending on which condition is met. For example, instead of the following code:*/
+    </script>
+</body>
+
+</html>

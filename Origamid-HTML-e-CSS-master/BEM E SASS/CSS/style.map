@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../style.scss",
+		"style2teste.css"
+	],
+	"sourcesContent": [
+		"@import \"./CSS/style2teste\";\r\n\r\n.card{\r\n    color:black;\r\n    .card-item{\r\n    font-size: 2rem;\r\n    }\r\n    font-family: Arial, Helvetica;\r\n    margin-top: 10px;\r\n}",
+		"h1{\r\n    font-size: 2rem;\r\n    font-family: Arial;\r\n    margin: 0;\r\n}\r\n\r\nbody{\r\n    margin: 0;\r\n    background-color: #cccccc;\r\n}\r\n\r\n\r\n"
+	],
+	"names": [],
+	"mappings": ";ACAA,AAAA,EAAE,CAAA;EACE,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,KAAK;EAClB,MAAM,EAAE,CAAC;CACZ;;;AAED,AAAA,IAAI,CAAA;EACA,MAAM,EAAE,CAAC;EACT,gBAAgB,EAAE,OAAO;CAC5B;;;ADPD,AAAA,KAAK,CAAA;EACD,KAAK,EAAC,KAAK;EAIX,WAAW,EAAE,gBAAgB;EAC7B,UAAU,EAAE,IAAI;CACnB;;;AAPD,AAEI,KAFC,CAED,UAAU,CAAA;EACV,SAAS,EAAE,IAAI;CACd"
+}

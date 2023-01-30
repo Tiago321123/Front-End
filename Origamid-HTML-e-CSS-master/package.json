@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "clean-css": "^5.2.4"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+  
+}

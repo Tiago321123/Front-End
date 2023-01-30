@@ -1,0 +1,194 @@
+body,ul,li,p{
+    margin:0;
+    padding:0;
+    font-size:1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style:none;
+
+}
+
+body{
+    margin-bottom:100px; /* só pra melhorar o visual, tava grudado em baixo */
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+
+h1{
+    text-align:center;
+    margin-top: 100px;
+}
+
+img{
+    max-width: 100%; /* Deixa responsivo as img ao reduzir a tela */
+    display: block;
+}
+.flexbox1{
+    background-color: #1d1d1d;
+    display: flex;
+    padding:20px;
+    justify-content: space-between;
+    align-items: center; /* alinhar a logo com o menu */
+    flex-wrap: wrap; /* no celular, o menu vai ficar embaixo da logo */
+}
+
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 10px;
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+    background: tomato;
+    border-radius: 18px;
+}
+
+/* FLEXBOX */
+
+/* Imagens */
+/*
+ .imagens{
+    display: flex; Deixar tudo um do lado do outro 
+    flex-wrap: wrap; 
+}
+ .imagens > div{
+    flex: 1 1 200px;
+ }
+*/
+.flexbox{
+    display: flex; /* Deixar tudo um do lado do outro */
+    flex-wrap: wrap; 
+    max-width: 800px; /* O máximo da largura que as imagens ficarão é um espaço de 1000px */
+    margin: 0 auto; /* Com isso a margin fica do mesmo tamanho nos dois lado */
+}
+.flexbox img{
+    filter:opacity(.8); /* Filtros para as imagens, exemplos */
+    filter:brightness(400px);
+    filter:contrast(100%);
+}
+ .flexbox div{  
+    flex: 1 1 200px;
+    margin: 10px;
+ }
+ @media (max-width:1030px){
+    .imagens{
+        margin: 0 auto;
+        margin-left: 10px;
+    }
+ }
+
+/* CSS GRID 1*/
+
+.grid1{
+    display:grid; /* Começa deixando tudo em coluna, um embaixo do outro */
+    grid-template-columns: 1fr 1fr 1fr; /* 1fr é 1 unidade fracionário, aqui seria 33,33% do width, divide em 3 colunas juntas */
+    /* grid-template-columns: repeat(3,1fr); mesma coisa que esse de cima */
+    max-width:800px;
+    padding: 10px;
+    margin: 0 auto;
+    gap: 20px; /* é gap ao invez de grid-gap, grid-gap e outros estão obsoletos, não tem efeito em alguns navegadores */
+}
+
+.grid1 > div:nth-child(n + 4){ /* escolher o filho do div, posso selecionar apenas um, dois ou selecinar a partir de um número */
+    /* Consigo agora estilizar a partir do 4 item */ 
+    display:grid;
+    grid-template-columns: 1fr 1fr;/* dividir em dois fr, tipo 50% 50%*/
+    gap:10px;
+    align-items:center; /* Alinhar o texto com a imagem */
+}
+
+.grid1 > div.anuncio{
+    grid-column: 1; /* Vou colocar esse anúncio na 1° coluna */
+    grid-row: 2 / 5; /* Quero que ocupe as linhas 2 até a 5 */
+    display:block; /* Vai bloquear o que foi feito em .grid1 > div:nth-child(n + 4), porque são propriedades do display:grid,
+    e pra funcionar tem q colocar sim o (.grid1 > div) ali em cima*/
+}
+
+@media (max-width: 600px){
+    .grid1{
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid1 div:nth-child(n + 4){
+        display:block;
+    }
+    .grid1 > div.anuncio{
+        grid-row: 2; /* ou então simplesmente grid-row: auto; e grid-column: auto; */
+        grid-row-start: 1;/* mandei o anúncio para o comeco da 1 linha */
+    }
+
+}
+
+/* CSS GRID 2 */
+
+.grid2{
+    max-width: 800px;
+    display:grid;
+    grid-template-columns: 1fr 200px; /* faz uma grande diferença no tamanho da imagem */
+    gap:20px;
+    margin: 0 auto;
+    padding: 10px;
+}
+/*
+.grid2 > div:nth-child(1){
+    grid-row: 1 / 5;
+    width: 800px;
+    margin-left: 50px;
+}                               Isso tudo aqui se resume em colocar a class sidebar, pq assim separa o video das outras imagens
+                                e aí não preciso fazer todo esse trabalho 
+.grid2 > div:nth-child(n + 2){
+    width: 50%;
+    margin-left: 200px;
+} */
+
+.sidebar div{
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px){
+    .grid2{
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+        display: flex;
+        overflow: scroll; /* faz uma barra de rolagem, da hora */
+    }
+
+    .sidebar div{
+        flex: 1 0 200px; /* deixa a base com 200px e o 0 aumenta a imagem */
+        margin: 0 10px;
+    }
+}
+
+/* CSS GRID 3 */
+
+.grid3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.grid3 div:nth-child(1){
+    grid-row: 1 / 3;
+}
+
+.grid3 img{
+    grid-column:1;
+    grid-row: 1/3;
+    align-self: end;
+}
+.grid3 div{
+    display:grid;
+}
+.grid3 p{
+    background-color:rgba(0,0,0,0.6);
+    padding: 10px;
+    color:#fff;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+}

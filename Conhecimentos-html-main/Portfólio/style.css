@@ -1,0 +1,210 @@
+/* GLOBAL */
+body{
+    font-family:Georgia, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.5em;
+    margin: 0;
+    background-color: #fff;
+    margin-bottom:0;
+}
+
+.container{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* header */
+
+#header{
+    background-color:rgb(36, 35, 35);
+    color: #e34343;
+}
+
+#header h1{
+    margin: 30px;
+    float: left; /* Era só isso basicamente pra dexar o nav na mesma linha do h1 */
+}
+
+#header a{
+    color: #fff;
+    text-decoration:none;
+}
+
+#header li{
+    list-style: none;
+    display: inline;
+    margin:16px; /* margin entre as palavras do menu */
+    font-size: 17px;
+    padding: 16px;
+}
+
+#header ul{
+    float:right;
+    margin: 30px; /* posição do menu no header */
+}
+
+/* Main */
+#main {
+    background-image: url(img/Background-Contato-01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+#main h1{
+    font-family: 'Lucida Sans';
+    font-size: 40px;
+    margin:200px;
+    color: #e34343;
+    line-height: 1.0em;
+}
+
+/* Sobre */
+.titu{
+    text-align:center;
+}
+
+#sobre p{
+    float: right;
+    width:50%;
+    margin-top: 8%;
+    margin-left: 15px;
+    margin-right: 30px;
+}
+
+#sobre span{
+    margin-left: 20px;
+}
+
+#sobre > .container > img{
+    margin-left: 10%;
+    border-radius: 10%;
+}
+
+/* Habilts */
+#Habilits > .container{
+    display: flex;
+}
+#Habilits{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.box2{
+    float:none; /* esse float e o width tem tudo a ver para fazer 3 tópicos, colunas, seja na mesma linha ou em outra */
+    text-align:center;
+    width:20%;
+    border:1px solid black;
+    border-left: none;
+    color:rgb(238, 91, 91);
+    background-color:rgb(39, 39, 39);
+    margin-bottom: 30px;
+}
+.box{
+        /* esse float e o width tem tudo a ver para fazer 3 tópicos, colunas, seja na mesma linha ou em outra */
+    text-align:center;
+    width:33.33%;
+    padding: 8px;
+    border:1px solid black;
+    border-left: none;
+    color:rgb(238, 91, 91);
+    background-color:rgb(39, 39, 39);
+}
+
+/* Projects */
+#projects > .container{
+    height: 50%;
+}
+#projects{
+    margin-bottom: 20px;
+}
+#projects > .container > .box-pai{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#projects > .container > .imagem{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+footer{
+    background-color:black;
+    text-align: center;
+    padding:20px;
+}
+footer a, footer p{
+    text-decoration: none;
+    color: #e34343;
+}
+footer li{
+    display: inline;
+    margin-right:10px;
+}
+
+@media (max-width: 600px) {
+    #header h1{
+        float:none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    #header ul{
+        float: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-left: 10px;
+    }
+    #main h1{
+        float: none;
+        display: flex;
+        margin: 30px;
+        padding: 0;
+        margin-top: 200px;
+        height: 300px;
+        line-height: 1em;
+    }
+    #sobre > .container > img{
+        width:90%;
+        margin-left: 5%;
+    }
+    #sobre > .container > p{
+        float: none;
+        width:90%;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+    #Habilits .box{
+        width: 90%;
+    }
+    #Habilits > .container{ /* Tem que ser para o filho do habilits, o grid ou flex*/
+        display:grid; 
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+@media (max-width: 1100px){
+    #sobre img{
+        margin-left: 10px;
+    }
+
+    #sobre > .container > p{
+        float: none;
+        width:90%;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+    
+    #Habilits .box{
+        width: 90%;
+    }
+    #Habilits{
+        display:flex;
+        flex-wrap: wrap;
+    }
+}

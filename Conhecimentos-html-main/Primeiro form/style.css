@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    font: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    float: right;
+    margin-right: 100px;
+}
+li{
+    display: inline;
+}
+h2{
+    float: left;
+}

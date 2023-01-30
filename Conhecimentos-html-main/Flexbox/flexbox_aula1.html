@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flebox</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 500px;
+            width: 50%;
+            margin: auto;
+            display: flex;
+            /* row ou column */
+            /* flex-wrap: wrap;  Respeita o width que coloquei no chield */
+            justify-content: center;
+            /* O justify funciona com o eixo X no nogoco, espace-between é bom pra menu */
+            align-items: start;
+            /* E esse como eixo Y */
+            gap: 1rem;
+            border: 1px solid #000;
+            background: linear-gradient(to right, rgb(20, 100, 35, 0), rgba(150, 30, 200, 1), rgb(31, 16, 161, 1));
+
+            /*background: -moz-[linear ou radial]-gradient([posição], [cor inicial], [cor final])
+            background: -moz-linear-gradient (top, #CF0000 , #0000FF) /*-- efeito vertical --
+            background: -moz-linear-gradient (left, #CF0000 , #0000FF) /*-- efeito horizontal --
+            background: -moz-radial-gradient (70% 50%, circle [atributo de tamanho], #CF0000, #0000FF) */
+        }
+
+        .cont {
+            height: 500px;
+            width: 50%;
+            margin: auto;
+            background: linear-gradient(to right, rgb(198, 143, 230), rgb(85, 0, 165));
+            position: relative;
+        }
+
+        .cont:before {
+            content: "";
+            position: absolute;
+            background: inherit;
+            width: 250px;
+            height: 250px;
+            top: -30%;
+            border-radius: 50%;
+        }
+
+        .chield {
+            width: 15%;
+            height: 100px;
+
+            border: 1px solid black;
+            background: linear-gradient(rgb(20, 100, 45), rgb(31, 16, 161));
+            transform: rotateY(360deg);
+        }
+
+        .chield span:nth-child(2n+1) {
+            background-color: red;
+        }
+
+        .terceiro {
+            width: 15%;
+            height: 100px;
+            border: 1px solid black;
+            background-color: red;
+        }
+
+        .terceiro span {
+            background-color: green;
+        }
+
+        .button {
+            height: 300px;
+            width: 50%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bt {
+            height: 20px;
+        }
+    </style>
+
+    <div class="container">
+
+        <span>
+            <div style="order:0" class="chield">ygv</div>
+        </span>
+        <span>
+            <div style="order:3" class="chield">knb bd</div>
+        </span>
+        <div style="order:2" class="chield">bd</div>
+        <div style="order:1" class="chield">Hello</div>
+
+        <div class="terceiro">
+            <span>Span!</span>
+        </div>
+    </div>
+    <h1>Vai aparece aí</h1>
+    <div class="cont">
+    </div>
+    <forms class="button">
+        <input class="bt" type="submit" value="Aperte"></input>
+    </forms>
+</body>
+
+</html>

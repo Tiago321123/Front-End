@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introdução</title>
+        <link rel="icon" href="Blog/tick (1).png">
+    </head>
+    <br>
+        <style>
+        p{
+        color:normal;
+        }
+        </style>
+        <h1 style="color:blue">Título do meu site</h1>
+        <p>Estamos aqui <br>mais uma vez, <strong>vamos</strong> aprender a <del>aprender</del> um pouco <sublime>mais</sublime>, sei lá o que tô falando, mas bora kkkk
+        teste <sub>adicao</sub> git <sup>pull</sup>, <i><!--iálico-->deu</i> certo fi!!!</p>
+        <p><marked>Estamos</marked> ficando <small>sem</small> <ins><!--texto inserido depois-->palavras</ins> <u><!--sublinhado-->suficientes</u> <del>para</del> serem <em><!--dar ênfase-->formatadas</em></p>
+        
+        <pre><!--é um texto pré formatado, as linhas e espaços contam-->
+        Tudo o que coloco nele, fica do jeito que está no código fonte, esse <code><pre></pre></code>
+        <b>negrito sem importancia,</b> o <strong>strong</strong> tem muita importancia
+        </pre>
+        
+        <h2>Conta: x<sup>2</sup> + 5 + H<sub>2</sub>O</h2>
+        <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
+    <pre>
+        <code>
+    num = int(input('Digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é PAR')
+    else:
+        print(f'O número {num} é ÍMPAR')
+    print('Fim do programa')
+        </code>
+    </pre>
+    <a href="My Website/web.html">Go to Blog</a>
+    <br>
+    <a target="_blank" href="My Website/web.html">Go to Blog, nova aba</a>
+
+    <h2>Citações simples</h2>
+    <p>Como diria o pai de um <abbr title="Aquele seu parceiro"><!--passa o mouse e aparece o significado-->amigo</abbr>: <q>o computador é um burro muito rápido</q><!--Coloca aspas de citacao--></p>
+    <h2>Citações completas</h2>
+    <p>Segundo Jeff Noble, <cite>seu livro</cite> HTML para Leigos:</p>
+    <blockquote cite="https://books.google.com.br/books?id=E8ZtDwAAQBAJ&pg=PA17&dq=HTML&hl=pt-BR&sa=X&ved=0ahUKEwjH5-PevNboAhVNIbkGHcoxCOgQ6AEIOjAC#v=onepage&q=HTML&f=false">
+        A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
+    </blockquote>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+    <h2>Texto invertido</h2>
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo><!--inverte o que estiver dentro--></p>
+    <!--Listas-->
+    <h2>Listas Ordenadas</h2>
+
+    <ol type="i"> <!-- Número romano com i -->
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Comer pão</li>
+    </ol>
+    <h2>Listas não Ordenadas</h2>
+        <ul type="square"> <!-- disc circle square -->
+            <li>Pão</li>
+            <li>Leite</li>
+            <li>Tomate</li>
+        </ul>
+    <a href="Blog/Blog.html">Go to Blog</a>
+    <h2>Minhas linguagens favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">  <!--em ordem alfabética-->
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+        </ol>
+
+        <li>Novas</li>
+        <ol type="a" start="5"> <!--em ordem alfabética comecando pela 5 letra-->
+                <li>PHP</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+        </ol>
+    </ol>
+
+    <h2 title="Aparece ao passar o mouse em cima">Meus jogos favoritos</h2>
+    <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+        </ul>
+    </ol>
+    <h2>Lista de Definições</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>- Linguagem de marcação para a criação do conteúdo de um site.</dd>
+        <dt>CSS</dt>
+        <dd>- Linguagem de marcação para a criação do design de um site.</dd>
+    </dl>
+    <b> htfhfh </b>
+    <hr style color="red"><!--Uma linha-->
+    <br>
+    <!--Tabela-->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th><!--Títulos da tabela ficam em negrito-->
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiago</td> <!--td para preencher a tabela-->
+                <td>tiagodesouza12310@gmail.com</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <br>
+
+    <a href="Blog/Printqualquer.jpeg"> <!--Link que ao clicar na imagem, aparece somente ela em tela cheia-->
+    <img src="Blog/Printqualquer.jpeg" alt="Print"
+    width="250" height="100">
+    </a>
+
+    <br>
+    <br>
+    <!--Forms-->
+    <form action="process.php" method="POST"><!--Estamos fazendo uma solicitação de postagem ao servidor
+    e as postagens são usadas para fazer coisas como adicionar dados a um banco de dados, é muito seguro.-->
+        <div>
+            <label>First name</label>
+            <input type="text" name="firstName" placeholder="First name">
+        </div>
+        <br>
+        <div>
+            <label>Last name</label>
+            <input type="text" name="lastName" placeholder="Last name">
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email address">
+        </div>
+        <br>
+        <div>
+            <label>Message</label>
+            <textarea name="message"></textarea>
+        </div> 
+        <br>
+        <div>
+            <label>Gender</label>
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <br>
+            <div>
+                <label>Age:</label>
+                <input type="number" name="age" value="30">
+            </div> 
+        <br>
+            <div>
+                <label>Birthaday:</label>
+                <input type="date" name="birthaday">
+            </div>
+        <br>
+            <input type="submit" name="submit" value="Submit">
+    </form>
+    <a href="My Website/web.html">Go to Blog</a>
+    <!--Button, para um botao realmente funcionar, precisa-se do JavaScript -->
+    <br>
+    <br>
+    <button>Click Me</button>
+
+    <div style="margin-top:500px"></div>
+    </body>
+</html>

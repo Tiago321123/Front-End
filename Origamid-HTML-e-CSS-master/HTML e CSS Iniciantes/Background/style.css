@@ -1,0 +1,68 @@
+.background{
+    height: 600px;
+    background-color:lightblue;
+    background-image: url("../4\ aula/bicicleta.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    /* background: black; se coloca apenas background, vai reescrever sobre esses de cima */
+    display: flex;
+}
+/* com flex e margin auto consigo colocar o texto no centro da imagem */
+h1{
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+body{
+    margin: 0;
+}
+
+.pattern{
+    height: 500px;
+    background-color: lightcoral;
+    background-image: url('pattern.svg');
+    background-repeat: repeat-x;
+    background-size:200px;
+}
+
+.gradient{
+    height: 400px;
+    background: linear-gradient(to right, blue 10%, white 50%, orange 10%); /* a segunda cor tem q ser maior q a primeira */
+}
+
+.gradien{
+    margin-top: 20px;
+    height: 400px;
+    background: radial-gradient(closest-side at 30% 20%,blue , white , orange ); /* tem várias formas, propiedades */
+}
+
+.link{
+    background-color: black;
+    color: #fff;
+    margin: 10px;
+    padding: 1rem 2rem;
+    display: block;
+    width: 40px;
+    transition: 0.3s; /* transition quando for usado o pseudo class */
+}
+
+.link:hover{
+    background-color: red;
+}
+
+.link:focus{ /* toca no botao, fica ativado até o próximo toque na tela */
+    background-color: green;
+    color: red;
+    outline: none;
+}
+
+.link:active{ 
+    background-color: white;
+}
+/* 
+.link:visited{ /* deixa marcado, dizendo q já foi visitado, mas exclui todos os outros acima
+    background-color: orange;
+} */

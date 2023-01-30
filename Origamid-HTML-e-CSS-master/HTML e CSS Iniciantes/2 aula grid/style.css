@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+}
+
+h2{
+    margin-top: 0;
+}
+
+body{
+    font-family:Arial;
+}
+
+.item{
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    border: 1px solid #e7e7e7;
+    padding: 20px;
+    display:grid; /* margin entre os elementos não sabressaem um sobre o outro */
+    /* com o grid eu não preciso colacar display: inline-block no .comprar */
+}
+
+.comprar{
+    background-color: #a8f;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #103;
+    text-decoration: none;
+}
+
+.grid{
+    display:grid;
+    height:800px;
+    grid-template-columns: auto auto;
+    justify-content:space-evenly;
+    gap:20px;
+    align-content:space-evenly;
+    place-content: space-around space-around; /* atallho para esses dois, une justify
+    e  align-content */
+    /* place-content: X  Y; align-content e jutify-content */
+    place-content: center; /* vai para os dois */
+}

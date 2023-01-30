@@ -1,0 +1,210 @@
+/* *{
+    margin:0;
+    padding:0; zera a margem e preenchimento, esse * acessa tudo, é usado para resetar
+} */
+
+body{
+    background-color: #f4f4f4;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 100; /*pode ser bold, número..., muda a grossura da fonte*/
+    /*Isso é o mesmo que
+    font: normal 16px Arial, Helvetica, sans-ser;*/
+    line-height: 1.5em; /*espaço entre as linhas, pode ser "px" tambem, mas geralmente é "em"*/
+    margin:0; /*tira a margem branca á esquerda da página*/
+}
+.post{ /*classes usa . ID usa # */
+    color:red;
+    background-color:#333;
+    border-radius: 15px; /* muito massa deixar os cantos arredondados*/
+    border-right: 5px red solid;
+    border-left: 5px red solid;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+
+    border-width: 3px;
+    border-bottom-width: 10px;
+    border-top-style:dotted; /*pontilhado,dotted*/
+    
+    /*é o mesmo que:*/
+    border: 5px  solid red;
+
+    padding: 20px; /* generaliza, ao inves ter que especificar o top, bottom, left e right*/
+
+    
+    margin:20px;/*coloca 20 px de margem nos 4 lados*/
+    margin:10px 0;/* coloca 10 em cima e em baixo, e 0 a esquerda e direita*/
+}
+.post-2{
+    border:3px dotted #ccc;
+    padding:20px;
+    margin:20px 0;
+}
+a{ /*tdos os links na página*/
+    text-decoration:none;
+    color:#000;
+}
+a:hover{ /*MUITO DA HORA, vc passa o mause e aparece o link em red*/
+    color:red;
+}
+a:active{ /*quando clicado, fica verde*/
+    color:green;
+}
+/*
+a:visited{
+    color:yellow;
+} */
+.container{
+    width:80%; /*defino se quero que o site cubra a página toda ou então parte dela*/
+    margin: auto; /*deixa equilibrado o tamanho da margem */
+}
+
+.button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+}
+.button:hover{
+    background:red;
+    color: #fff;
+}
+.container h3{ /* altera os h3 que estão dentro da classe*/
+    font-family: Tahoma;
+    font-weight:800;
+    font-style:italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+.Category{
+    border: 1px #ccc solid;
+    padding: 10px;
+    padding-left: 5px;
+    border-radius: 15px; /* muito massa deixar os cantos arredondados*/
+}
+.Category h3{
+    text-align: center;
+}
+.Category ul{
+    padding:0; /* vai tirar o espaco a esquerda*/
+    list-style:square;
+    list-style: none; /*tira o quadrado(square) da lista*/
+}
+.Category li{
+    padding-bottom:6px;
+    border-bottom:dotted 1px #333;
+    list-style-image: url('../Conhecimentos html/tick (1).png');
+}
+.my-form{
+    padding: 20px;
+}
+.my-form .form-group{
+    padding-bottom:15px;
+}
+.my-form label{
+    display:block;
+}
+.my-form input[type="text"], .my-form textarea{ /*Alterar apenas as caixas texto*/
+    padding: 8px;
+    width: 100%;
+}
+/*
+.my-form input[type="submit"]{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+} coloquei lá em cima em buttom, para ser para todos os botões*/
+.block{
+    float:left;
+    width:33.3%;
+    border:1px solid #ccc;  
+    padding: 10px;
+    box-sizing: border-box; /*esses três últimos fazem aquele box tudo junto*/
+}
+.block h3{
+    text-decoration: none;
+}
+.clr{
+    clear: both;
+}
+#main-block{
+    margin-top:30px;
+    float: left;
+    width:70%;
+}
+#sidebar{
+    margin-top:30px;
+    float: right;
+    width:30%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.p-box{
+    color:rgb(1, 1, 107);
+    width:800px;
+    height:500px;
+    border: 1px solid #000;
+    margin-top:30px;
+    position: relative;
+    background-image: url('../Blog/imageluz.jpg');
+    background-position: 100px 200px;
+    background-repeat: no-repeat;
+    background-position: center center;/*centralizar no centro da imagem, pode ser top,bottom...*/ 
+}
+/*
+.p-box h1{
+    position:absolute;
+    top: 40px;
+} Quando faço isso, estou colocando esse h1 lá no topo, 40px abaixo, tem que ser relativo o .p-box*/
+.p-box h1{
+    position: absolute;
+    top: 100px;
+    left:200px;
+}
+.p-box h2{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+.fix-me{
+    position: fixed;
+    top:400px;
+}
+.my-list li:first-child{/*pseudo class*/
+    background:red;
+}
+.my-list li:last-child{/*pseudo class*/
+    background:blue;
+}
+.my-list li:nth-child(3){
+    background: #333;
+}
+.my-list li:nth-child(even){/* even aqui é somente os pares*/
+    background:yellow;
+}
+.container ul{
+    text-decoration:none;
+    list-style: none;
+    padding:18px;
+    font-size:18px;
+    text-align:left;
+    margin:auto; /*Deixa colado lá com o título*/
+}
+#navbar li{
+    display: inline;
+}
+#navbar{
+    background:green;
+}
+#navbar a{
+    color: #fff;
+    padding-right: 18px;
+}
+
+

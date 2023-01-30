@@ -1,0 +1,240 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
+.container{
+    overflow:hidden;
+    width:100%;
+}
+
+/* Header */
+
+
+#header h1{
+    font-size:35px;
+    float: left;
+    margin: 30px;
+    margin-left: 50px;
+}
+#header span{
+    color:rgb(185, 0, 0);
+    font-style: italic; /* stilo da letra n é o mesmo q família */
+}
+#header ul{
+    float: right;
+    margin: 30px;
+}
+#header a{
+    text-decoration:none;
+    color: inherit;
+}
+#header li{
+    list-style: none;
+    font-size: 18px;
+    display: inline;
+    margin: 10px;
+}
+forms .button{
+    background-color: rgb(185, 0, 0);
+    padding: 8px 45px;
+    border-radius:7px; 
+    color:#fff;
+    font-size:15px;
+    border: none;
+    margin:10px;
+}
+
+/* Main */
+
+#main img{
+    margin:100px 0 100px 300px;
+    float: left;
+}
+#main .frase{
+    margin:150px 0 100px 720px;
+}
+.frase h1{
+    font-size:35px;
+    margin-top:1px;
+    color:red;
+}
+
+/*  Serviços */
+
+#Serviços ul{
+    float:left;
+    margin: 140px 150px 0 250px;
+}
+#Serviços ul li{
+    list-style-type: none;
+    line-height: 30px;
+}
+#Serviços ul li img{
+    margin-right: 20px;
+}
+#Serviços .Computer2{
+    margin-top: 90px;
+}
+#Serviços p{
+    margin-left: 287px;
+    margin-top: 0;
+    font-weight: bold;
+}
+.button2{
+    background-color: rgb(204, 204, 204);
+    padding: 10px 0px;
+    border-radius:7px; 
+    color:rgb(134, 131, 131);
+    font-size:15px;
+    border: none;
+    margin: 2px 2px 0 287px;
+}
+/* TIRAR AS SETAS DA CAIXA DO TIPO NUMBER */
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+.button3{
+    background-color: rgb(185, 0, 0);
+    padding: 8px 45px;
+    border-radius:7px; 
+    color:#fff;
+    font-size:15px;
+    border: none;
+    margin: 2px 2px 0 0;
+}
+
+/* BOX */
+
+#box{
+    margin-left: 220px;
+}
+.box{
+    background-color: rgb(168, 168, 168);
+    padding: 20px;
+    margin:170px 20px 0 20px;
+    width: 30%;
+    float: left;
+    border-radius: 7px;
+    padding-bottom: 5px;
+}
+.box h4{
+    font-size: 20px;
+    margin: 0px;
+    color: none;
+}
+.box h6{
+    margin: 0px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.box img{
+    float: left;
+    margin-right: 10px;
+    width: 60px;
+    padding-bottom: 70px;
+}
+.box p{
+    margin-left: 20px;
+    text-shadow: 20px 10px 5px 10px red;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 100px;
+    background-color: black;
+}
+footer h1{
+    font-style: italic;
+}
+footer .box-footer{
+    margin-top: 100px;
+    color:#fff;
+    float: left;
+    margin:10px 30px 100px 50px;
+}
+footer h3{
+    margin-top: 30px;
+}
+.box-footer p{
+    list-style: none;
+    line-height: 2em;
+}
+.box-footer a{
+    color: #fff;
+}
+.box-footer img{
+    margin-left: 15px;
+}
+
+
+@media(max-width: 600px) {
+    #header h1, #header ul{
+       text-align: center;
+       float: none;
+    }
+    #header forms{
+       display: none;
+    }
+    #main img, #main .frase{
+       margin:20px 0 20px 85px;
+       float: none;
+    }
+    #Serviços ul{
+       float:none;
+       margin:0;
+       margin-top: 450px;
+       margin-left: 50px;
+    }
+    #Serviços{
+        position:relative;
+    }
+    #Serviços .Computer2{
+        margin: 0;
+        float:left;
+        position: absolute;
+        top: 50px;
+        left: 80px;
+    }
+    #Serviços p{
+        margin: 40px 0 0 90px;
+    }
+    #Serviços input{
+        margin:auto;
+        margin: 20px 0 0 90px;
+        display:block;
+    }
+    #box{
+        margin-left:30px;
+    }
+    .box{
+        float:none;
+        margin:auto;
+        margin: 40px 5px 0 0;
+        width:100%;
+        box-sizing: border-box; /* MUUUIITO show */
+    }
+    footer .box-footer{
+        float: none;
+        width: 100%;
+        margin:10%;
+        box-sizing: border-box;
+    }
+    footer .box-footer p{
+        line-height: 1em;
+    }
+    footer .footer-1{
+        margin-left: 100px;
+        margin-top: 0;
+    }
+    footer h1{
+        margin-left: 50px;
+        margin-bottom:0;
+    }
+    
+}

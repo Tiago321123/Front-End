@@ -1,0 +1,49 @@
+.px{
+    font-size: 32px;
+    margin: 0px;
+    padding: 0px;
+    background-color: aquamarine;
+    font-family: Georgia, Times, serif;
+    font-weight: bold; /* pode ser q o font-family tenha apenas 2 tamanhos de weight, 
+    ou mais ou menos, Georgia é bold e 500*/
+    font-style:italic; /* tem famílias q são italic, daí é obgatório colocar, se não força */
+    letter-spacing: 0.05rem;
+    line-height:1.5rem;
+    text-transform:uppercase;
+    text-transform: lowercase;
+    text-align:left;
+    text-indent: 30px; /* espaço antes de comecar o parágrafo */
+    text-shadow: 0px 25px 30px gray; /* aparece um borrao no fundo, replica o texto no fundo */
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.rem{
+    margin: 0px;
+    padding: 0px;
+    font-size: 2rem;
+    background-color: aquamarine;
+}
+/* 
+.div{
+    margin: 0;
+    padding: 0;
+    width: calc(50vw / 3); /* vw == viewport width 
+    width: calc(50vw - 100px);
+    height: 100vh;  /* vh == viewport height 
+    background-color: aqua;
+} */
+
+.item{
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 5px;
+}
+
+.menu:first-child(3):hover{
+    display: inline;
+}

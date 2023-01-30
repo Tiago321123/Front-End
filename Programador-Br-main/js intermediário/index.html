@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function onLoaded() {
+        var t = document.getElementById('h2');
+        var t2 = document.getElementById('oi');
+        t.innerHTML = 'Carregou';
+
+       // t.onclick = mudarText; // pegar apenas a referência da função, e não executá-la.  1° forma de fazer
+
+       t.addEventListener('click',mudarText); // 2° forma de fazer, não tem o 'on' de onclick e é tudo minúsculo 
+       t.addEventListener('mouseover',linkOver);
+       t.addEventListener('mouseout',linkOut);
+       //debugger;
+       t.onclick= paraMaiusculo;
+       t2.onmouseover= paraMaiusculo;
+    }
+
+    function mudarText() {
+        this.innerHTML = 'e mudou de novo';
+    }
+    function linkOver(){
+        this.innerHTML = 'entrouuu';
+    }
+
+    function linkOut(){
+        this.innerHTML = 'saiuu';
+    }
+
+    function paraMaiusculo() {
+        this.innerHTML = this.innerHTML.toUpperCase(); // assim eu consigo usar para vários elementos, ids
+    }
+</script>
+
+<body onload="onLoaded()">
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+
+        span {
+            display: none;
+        }
+
+        input {
+            border: 1px solid white;
+        }
+
+        div {
+            background-color: cornflowerblue;
+            display: inline-block;
+            padding: 15px 30px;
+            color: white;
+            font-size: 2rem;
+        }
+    </style>
+
+    <h1 id="oi" onclick="console.log(this)">hello</h1>
+    <p class="ola" onclick="this.style.color = 'orange'">fala aí <span>Outro texto</span></p>
+    <p class="ola">mensagem 2</p>
+    <p class="ola" novoAtributo="fala mano bom">mensagem 5</p>
+    <p id="p">oiii</p>
+
+    <h2 id="h2">Clique em mim</h2>
+    <input type="text" onchange="changeh1(this)"></input> <!-- ativa depois de finalizado, dar o enter-->
+    <input type="text" oninput="changeh1(this)"></input> <!-- ativa ao vivo, enquanto é feito -->
+
+    <div onmouseover="LinkOver(this)" onmouseout="LinkOut(this)" id="Link">Click</div>
+    <script src="script.js"></script>
+    <!-- faz toda diferença colocar o js no início, fim ou no meio onde precisa -->
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+@import "./CSS/style2teste";
+@import "sass2";
+
+@mixin title-style{
+    font-size: 2rem;
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+}
+
+@mixin border-box{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@mixin title{
+    font-weight: bold;
+    font-family: monospace;
+}
+
+@mixin text-large{
+    font-size: 4rem;
+    line-height: 1;
+}
+
+@mixin title-large{
+    @include text-large;
+    @include title;
+}
+
+$color-primary: red;
+$font-family: Arial, Helvetica, sans-serif;
+
+.card{
+    color:$color-primary;
+        .card-item{
+            font-size: 2rem;
+            color: $color-primary;
+            h1 {
+                font: {
+                family: "Arial";
+                size: 3rem;
+                weight: 900;
+                }
+            }
+        }
+    font-family: $font-family;
+    margin-top: 10px;
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            &:hover{
+                color: pink;
+            }
+        }
+    }
+    p{
+        @include title-style;
+    }
+}

@@ -1,0 +1,43 @@
+body{
+    margin:50px;
+    padding:0;
+    font: Arial;
+}
+
+h1{
+    text-align:center;
+}
+
+h2{
+    color:#fff;
+    margin:0;
+}
+
+p{
+    color: #b2b2b2;
+}
+
+span{
+    color: #febe01;
+}
+
+.container{
+    /* tira a droga do width: 100% q fica responsivo o tamanho da div */
+    background-color: #111;
+    padding: 30px;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.btn-primary{
+    border-radius: 4px;
+    background-color: #febe01;
+    color: #332200;
+    padding: 10px;
+    text-decoration: none;
+} 
+/* Incrível como eu tava fazendo código lixo, que não precisava */
+
+img{
+    max-width: 100%; /* imagem responsiva, max-width de acordo com o elemento pai */
+}
